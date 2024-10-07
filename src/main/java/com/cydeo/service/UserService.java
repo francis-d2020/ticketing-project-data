@@ -11,5 +11,10 @@ public interface UserService {
     void save(UserDTO user);
     void deleteByUserName(String username);
     UserDTO update(UserDTO user);
+  //deleting the user only from the UI not from the DB
+    void delete(String username);
+    List<UserDTO> listAllByRole(String role);
+
+
 
 }

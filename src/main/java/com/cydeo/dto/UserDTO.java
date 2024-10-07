@@ -10,7 +10,11 @@ import javax.validation.constraints.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+
+//added this id field so when mapper works it will map the id also.
 public class UserDTO {
+
+    private Long id;
 
     @NotBlank
     @Size(max = 15, min = 2)
@@ -125,4 +129,11 @@ public class UserDTO {
         this.gender = gender;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
