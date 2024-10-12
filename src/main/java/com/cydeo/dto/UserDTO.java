@@ -11,9 +11,9 @@ import javax.validation.constraints.*;
 @NoArgsConstructor
 @AllArgsConstructor
 
-//added this id field so when mapper works it will map the id also.
 public class UserDTO {
 
+    //added this id field so when mapper works it will map the id also.
     private Long id;
 
     @NotBlank
