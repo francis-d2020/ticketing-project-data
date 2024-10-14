@@ -14,15 +14,20 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "users")
-@Where(clause = "is_deleted=false")
+
 //this means that all repository that uses this entity
 //then all the queries will concatenate this with this clause
+@Table(name = "users")
+//@Where(clause = "is_deleted=false") // SELECT * FROM users WHERE id = 4 AND is_deleted = false;
+//we cant use it bcuz we need to find also tasks of deleted employees
 public class User extends BaseEntity {
 
     private String firstName;
     private String lastName;
+
+    @Column(unique = true)
     private String userName;
+
     private String passWord;
     private boolean enabled;
     private String phone;

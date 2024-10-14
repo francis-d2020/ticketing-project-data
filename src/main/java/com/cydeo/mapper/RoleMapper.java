@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 public class RoleMapper {
     private ModelMapper modelMapper;
 
+
     public RoleMapper(ModelMapper modelMapper) {
         this.modelMapper = modelMapper;
     }

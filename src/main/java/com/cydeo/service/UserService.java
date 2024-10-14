@@ -9,7 +9,7 @@ public interface UserService {
     List<UserDTO> listAllUsers();
     UserDTO findByUserName(String username);
     void save(UserDTO user);
-    void deleteByUserName(String username);
+   // void deleteByUserName(String username);
     UserDTO update(UserDTO user);
   //deleting the user only from the UI not from the DB
     void delete(String username);

@@ -2,6 +2,7 @@ package com.cydeo.repository;
 
 import com.cydeo.entity.Project;
 import com.cydeo.entity.User;
+import com.cydeo.enums.Status;
 import org.hibernate.metamodel.model.convert.spi.JpaAttributeConverter;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -13,7 +14,7 @@ public interface ProjectRepository extends JpaRepository<Project,Long> {
 
     //find the projects that belong to this manager
     List<Project> findAllByAssignedManager(User manager);
+    List<Project> findAllByProjectStatusIsNotAndAssignedManager(Status status, User assignedManager);
 
 
 }
-
